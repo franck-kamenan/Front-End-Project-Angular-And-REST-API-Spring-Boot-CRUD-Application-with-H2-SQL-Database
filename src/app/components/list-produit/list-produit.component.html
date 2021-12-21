@@ -1,0 +1,17 @@
+<h1> List des produits</h1>
+
+<div class="container"> 
+    <div class="row">
+        <div class="card col-6" *ngFor="let item of listProduit" style="width: 18rem;">
+
+            <div class="card-header">
+                <h5>{{item.nom}}</h5>
+            </div>
+
+            <div class="card-body produit-card-body">
+              <p class="card-text">marque: {{item.marque.nom}}</p>
+              <a routerLink="/detail/{{item.id}}"><button class = "btn btn-success">details</button></a>
+            </div>
+          </div>
+    </div>
+</div>
